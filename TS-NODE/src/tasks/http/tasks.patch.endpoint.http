@@ -1,0 +1,6 @@
+PATCH http://localhost:3001/tasks/update
+Content-Type:application/json
+{
+    "_id":"689a03574e4667ac4cc8e00a",
+    "title":"updated task by task validated data"
+}
