@@ -1,3 +1,3 @@
-import { ITask } from "./task.interface";
+import type { ITask } from "./task.interface";
 
 export type IUpdateTask = Partial<ITask> & { _id: string };
