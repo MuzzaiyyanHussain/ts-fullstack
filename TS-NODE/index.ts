@@ -7,7 +7,7 @@ import cors, { CorsOptions } from "cors";
 import { responseFormatter } from "./src/middleware/responseformatter.middleware";
 dotenv.config();
 const app: Express = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.use(cors());
 
 app.use(express.json());

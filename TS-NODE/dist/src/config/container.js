@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.container = void 0;
+const inversify_1 = require("inversify");
+const task_controller_1 = require("../tasks/task.controller");
+const tasks_router_1 = require("../tasks/tasks.router");
+const user_controller_1 = require("../user/user.controller");
+const tasks_service_1 = require("../tasks/tasks.service");
+const updateTask_provider_1 = require("../tasks/providers/updateTask.provider");
+const getTask_provider_1 = require("../tasks/providers/getTask.provider");
+exports.container = new inversify_1.Container();
+exports.container.bind(task_controller_1.TasksController).toSelf().inTransientScope();
+exports.container.bind(tasks_router_1.TasksRouter).toSelf().inTransientScope();
+exports.container.bind(user_controller_1.UserController).toSelf().inTransientScope();
+exports.container.bind(tasks_service_1.TaskService).toSelf().inTransientScope();
+exports.container.bind(updateTask_provider_1.updateTaskProvider).toSelf().inTransientScope();
+exports.container.bind(getTask_provider_1.getTaskProvider).toSelf().inTransientScope();
